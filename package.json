@@ -5,13 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "postbuild": "node scripts/copy-standalone-assets.mjs",
+    "start": "node --env-file-if-exists=.env.production --env-file-if-exists=.env.local .next/standalone/server.js",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "next": "16.4.2",
+    "postgres": "^3.4.9",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -20,5 +24,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.9"
   }
 }
