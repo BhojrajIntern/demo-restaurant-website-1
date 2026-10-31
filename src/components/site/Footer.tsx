@@ -12,7 +12,7 @@ export function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <Logo />
-            <p>Charcoal, clay ovens and slow-cooked curries from four corners of India — served late in the heart of Indiranagar.</p>
+            <p>Charcoal, clay ovens and slow-cooked curries from four corners of India — served late in the heart of Demo Nagar.</p>
             <div className="socials">
               <a href="#" aria-label="Instagram"><InstagramIcon size={18} /></a>
               <a href="#" aria-label="Facebook"><FacebookIcon size={18} /></a>

@@ -25,7 +25,7 @@ export function Reviews() {
           <div><span className="eyebrow">Guest notes</span><h2 className="h-lg" id="reviews-title">Kind words from <span className="italic">our regulars</span></h2></div>
         </div>
         <div className="reviews-wrap">
-          <div className="rating-summary reveal">
+          <div className="rating-summary reveal" suppressHydrationWarning>
             <div>
               <div className="rating-big">4.8</div>
               <div className="rating-stars" role="img" aria-label="4.8 out of 5 stars">★★★★★</div>

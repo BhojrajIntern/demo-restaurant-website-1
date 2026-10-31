@@ -34,7 +34,7 @@ export function Logo() {
 const MESSAGES = [
   <>🪔 Diwali Feast menu now on — 7 courses, ₹1,499 · <Link href="/#events">See dates</Link></>,
   <>15% off your first online order with code <strong>EMBER15</strong> · <Link href="/menu">Order now</Link></>,
-  <>Free delivery on orders above ₹799 across Indiranagar, Domlur &amp; Koramangala</>,
+  <>Free delivery on orders above ₹799 across Demo Nagar and nearby areas</>,
 ];
 
 export function Announcement() {

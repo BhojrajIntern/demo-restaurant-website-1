@@ -129,7 +129,7 @@ export function PrivateDining() {
   return (
     <section className="section" id="private" aria-labelledby="private-title" style={{ paddingTop: 0 }}>
       <div className="container">
-        <div className="private reveal">
+        <div className="private reveal" suppressHydrationWarning>
           <div className="private-media">
             <Image src={IMG.terrace} alt="The lantern-lit terrace set for a private dinner" fill sizes="(max-width: 860px) 100vw, 50vw" style={{ objectFit: "cover" }} />
           </div>

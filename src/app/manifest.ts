@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Ember & Saffron — Modern Indian Kitchen & Bar",
     short_name: "Ember & Saffron",
-    description: "Book a table or order delivery from Ember & Saffron, Indiranagar.",
+    description: "Book a table or order delivery from Ember & Saffron, Demo Nagar.",
     start_url: "/",
     display: "standalone",
     background_color: "#140f0c",

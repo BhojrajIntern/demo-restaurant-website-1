@@ -1,6 +1,6 @@
 # Ember & Saffron — Next.js restaurant website + manager dashboard
 
-A fictional modern Indian restaurant (Indiranagar, Bengaluru) built with **Next.js 16 (App Router), React 19
+A fictional modern Indian restaurant (Demo Nagar, Bengaluru — all details are fictional) built with **Next.js 16 (App Router), React 19
 and TypeScript**. One project contains the customer website, the API and the manager dashboard.
 
 ## Run it
@@ -25,7 +25,7 @@ cp .env.example .env.production   # set NEXT_PUBLIC_SITE_URL, ADMIN_PASSWORD, DA
 npm run build && npm start        # production server on http://localhost:3000
 ```
 
-Data is stored in **PostgreSQL** when `DATABASE_URL` is set, otherwise in `data/db.json`.
+**Showcase mode** is on by default: orders, bookings, enquiries and newsletter sign-ups show a confirmation but nothing is stored, and `/admin` shows sample data (no database needed). Set `SHOWCASE_MODE=false` to store real data — in **PostgreSQL** when `DATABASE_URL` is set, otherwise in `data/db.json`.
 
 ## How it works
 

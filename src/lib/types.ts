@@ -89,6 +89,8 @@ export type AdminStats = {
 
 export type AdminData = {
   serverTime: string;
+  /** true when running as a public demo: the data below is sample data and nothing is saved */
+  showcase: boolean;
   today: string;
   stats: AdminStats;
   orders: Omit<Order, "token">[];

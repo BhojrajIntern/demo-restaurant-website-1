@@ -33,7 +33,7 @@ export function Newsletter() {
   return (
     <section className="section" aria-labelledby="news-title">
       <div className="container">
-        <div className="newsletter reveal">
+        <div className="newsletter reveal" suppressHydrationWarning>
           <div>
             <span className="eyebrow">The Ember Letter</span>
             <h2 className="h-lg" id="news-title" style={{ marginTop: 16 }}>First dibs on <span className="italic">feasts &amp; tables</span></h2>

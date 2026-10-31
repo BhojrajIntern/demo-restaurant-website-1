@@ -238,6 +238,7 @@ export async function adminData(): Promise<AdminData> {
   ]);
   return {
     serverTime: nowISO(),
+    showcase: s.kind === "showcase",
     today,
     stats: stats(orders, reservations, enquiries, subscribers.length, today),
     orders: orders.map(({ token, ...o }) => (void token, o)),

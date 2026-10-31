@@ -4,13 +4,16 @@ import type { ImageName } from "./images";
 
 export const brand = {
   name: "Ember & Saffron",
-  phone: "+91 98765 43210",
-  phoneHref: "tel:+919876543210",
-  whatsapp: "https://wa.me/919876543210?text=Hi%20Ember%20%26%20Saffron!",
-  whatsappNumber: "919876543210",
+  /* Deliberately fictional (not a dialable number) so no real person receives a demo visitor's call or message. */
+  phone: "+91 00000 00000",
+  phoneHref: "tel:+910000000000",
+  whatsapp: "https://wa.me/910000000000?text=Hi%20Ember%20%26%20Saffron!",
+  whatsappNumber: "910000000000",
   email: "hello@emberandsaffron.demo",
-  address: "1124, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038",
-  mapsHref: "https://www.openstreetmap.org/?mlat=12.9719&mlon=77.6412#map=17/12.9719/77.6412",
+  streetAddress: "123 Example Street, Demo Nagar",
+  city: "Bengaluru",
+  postalCode: "560000",
+  address: "123 Example Street, Demo Nagar, Bengaluru 560000 (fictional demo address)",
   timezone: "Asia/Kolkata",
 } as const;
 

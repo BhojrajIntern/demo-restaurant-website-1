@@ -210,6 +210,11 @@ export function AdminApp() {
               <span className="updated">{updated && `Updated ${updated}`}</span>
             </div>
           </header>
+          {data?.showcase && (
+            <div className="notice info" role="status" style={{ margin: "0 0 16px" }}>
+              <span><strong>Showcase mode:</strong> this dashboard shows sample data. Orders, bookings and sign-ups from the website are not saved, and changes made here won&apos;t stick.</span>
+            </div>
+          )}
           {!actions ? <div className="empty">Loading…</div> : (
             <>
               {view === "dashboard" && <DashboardView {...actions} />}

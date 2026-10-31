@@ -1,6 +1,7 @@
 /* Homepage sections without interactivity (rendered on the server, zero JavaScript). */
 import Image from "next/image";
 import Link from "next/link";
+import { brand } from "@/lib/data";
 import { IMG } from "@/lib/images";
 import { ArrowRight } from "../icons";
 import { CountUp } from "./CountUp";
@@ -97,7 +98,7 @@ const FAQS: [string, string][] = [
   ["Do you cater to allergies and dietary needs?", "Yes. Every dish on our menu lists its major allergens, and roughly half the menu is vegetarian. Tell your server about any allergy — our kitchen handles nuts, dairy and gluten, so we can't guarantee zero cross-contact."],
   ["Is there a dress code?", "Smart casual. Come as you are for lunch; most guests dress up a little in the evening."],
   ["Are children welcome?", "Absolutely. We have high chairs, a small kids' menu and crayons. The terrace is adults-only after 9 pm on Fridays and Saturdays."],
-  ["How far do you deliver?", "Around 6 km from Indiranagar, including Domlur, Koramangala, HAL, Ulsoor and parts of Whitefield Road. Enter your pincode on the order page to check."],
+  ["How far do you deliver?", "Around 6 km from Demo Nagar, including the neighbouring areas. Enter your pincode on the order page to check."],
   ["Can I change or cancel my booking?", "Yes — use the link in your confirmation or call us. Cancellations are free up to 2 hours before your booking. Large-group bookings require 48 hours' notice."],
   ["Do you serve alcohol?", "We have a full bar with regional craft gins, Indian single malts and a seasonal cocktail list, plus plenty of zero-proof coolers."],
 ];
@@ -110,7 +111,7 @@ export function Faq() {
           <span className="eyebrow">Good to know</span>
           <h2 className="h-lg" id="faq-title" style={{ margin: "16px 0 20px" }}>Questions, <span className="italic">answered</span></h2>
           <p className="lead">Still curious? Call or WhatsApp us — a real person answers between 11 am and 11 pm.</p>
-          <a className="btn btn-dark" href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" style={{ marginTop: 12 }}>Chat on WhatsApp</a>
+          <a className="btn btn-dark" href={`https://wa.me/${brand.whatsappNumber}`} target="_blank" rel="noopener noreferrer" style={{ marginTop: 12 }}>Chat on WhatsApp</a>
         </div>
         <div className="faq reveal reveal-d1">
           {FAQS.map(([q, a], i) => (

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { api } from "@/lib/client";
+import { api, RequestError } from "@/lib/client";
 import { rupee, type OrderMode } from "@/lib/pricing";
 import type { OrderStatus, PublicOrder } from "@/lib/types";
 import { CheckIcon, CloseIcon } from "../icons";
@@ -30,8 +30,9 @@ export function TrackingDialog({ id, token, mode, fresh }: { id: string; token: 
           setLastOrder({ id, token, mode, done: true });
           return; // final state — stop polling
         }
-      } catch {
-        /* keep trying */
+      } catch (e) {
+        if (e instanceof RequestError && e.status === 404) return; // unknown order (e.g. demo orders aren't saved) — nothing to poll
+        /* otherwise keep trying */
       }
       if (alive) timer = setTimeout(poll, 4000);
     };

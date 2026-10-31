@@ -45,7 +45,7 @@ export function Hero() {
             <span className="badge"><span className="stars">★★★★★</span> 4.8 · 2,140 Google reviews</span>
             <span className="badge"><OpenStatus /></span>
           </div>
-          <span className="eyebrow">Modern Indian · Charcoal &amp; Tandoor · Indiranagar</span>
+          <span className="eyebrow">Modern Indian · Charcoal &amp; Tandoor · Demo Nagar</span>
           <h1 className="h-xl" id="hero-title" style={{ marginTop: 18 }}>
             Fire-kissed Indian, <span className="italic">made for long evenings.</span>
           </h1>

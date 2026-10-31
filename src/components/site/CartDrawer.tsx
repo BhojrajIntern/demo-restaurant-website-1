@@ -62,7 +62,7 @@ export function CartDrawer() {
                 <button style={{ flex: 1, justifyContent: "center" }} aria-pressed={cart.mode === "pickup"} onClick={() => update({ mode: "pickup" })}><StoreIcon size={17} /> Pickup</button>
               </div>
               <div className="free-progress">
-                {cart.mode === "pickup" ? "Pickup from Indiranagar · ready in about 25 minutes" : left > 0
+                {cart.mode === "pickup" ? "Pickup from Demo Nagar · ready in about 25 minutes" : left > 0
                   ? <>Add <strong>{rupee(left)}</strong> more for <strong>free delivery</strong></>
                   : <>🎉 You&apos;ve unlocked <strong>free delivery</strong></>}
                 {cart.mode === "delivery" && <div className="bar"><i style={{ width: `${Math.min(100, (totals.after / fees.freeDeliveryAbove) * 100)}%` }} /></div>}

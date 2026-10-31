@@ -7,7 +7,7 @@ import type { Enquiry, Order, Reservation, Subscriber } from "../../types";
  * All update functions are atomic: two managers clicking at the same moment can't overwrite each other.
  */
 export interface Store {
-  readonly kind: "postgres" | "file";
+  readonly kind: "postgres" | "file" | "showcase";
   ping(): Promise<void>;
 
   insertOrder(order: Omit<Order, "id">): Promise<Order>;

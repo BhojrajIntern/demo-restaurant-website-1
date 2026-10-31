@@ -1,6 +1,6 @@
 "use client";
 import { useDeferredValue, useEffect, useMemo, useRef, useState, type FormEvent } from "react";
-import { categories, fees, menu, servicePincodes, tagLabels, type Dish } from "@/lib/data";
+import { brand, categories, fees, menu, servicePincodes, tagLabels, type Dish } from "@/lib/data";
 import { openStatus, orderTimes } from "@/lib/hours";
 import { rupee } from "@/lib/pricing";
 import { BikeIcon, SearchIcon, StoreIcon } from "../icons";
@@ -124,7 +124,7 @@ export function OrderMenu() {
               <span className={`addr-status ${pinStatus ? (pinStatus.ok ? "ok" : "err") : ""}`} role="status">{pinStatus?.text}</span>
             </form>
           ) : (
-            <div className="addr" style={{ fontWeight: 700, fontSize: 14, color: "var(--text-dark-dim)" }}><StoreIcon size={18} /> Pickup from 12th Main, Indiranagar · ready in ~25 min</div>
+            <div className="addr" style={{ fontWeight: 700, fontSize: 14, color: "var(--text-dark-dim)" }}><StoreIcon size={18} /> Pickup from {brand.streetAddress} · ready in ~25 min</div>
           )}
           <div className="order-when">
             <label className="sr-only" htmlFor="when">When</label>
@@ -144,7 +144,7 @@ export function OrderMenu() {
               <li key={c.id}><a href={`#cat-${c.id}`} className={active === c.id ? "is-active" : ""}>{c.name}<span>{counts[c.id]}</span></a></li>
             ))}
           </ul>
-          <div className="help"><strong>Allergies?</strong>Tap any dish for its allergens, or call <a href="tel:+919876543210" style={{ textDecoration: "underline" }}>+91 98765 43210</a> before ordering.</div>
+          <div className="help"><strong>Allergies?</strong>Tap any dish for its allergens, or call <a href={brand.phoneHref} style={{ textDecoration: "underline" }}>{brand.phone}</a> before ordering.</div>
         </aside>
 
         <div>
@@ -201,7 +201,7 @@ export function OrderMenu() {
       <button className={`mini-cart ${showMini ? "is-visible" : ""}`} onClick={openCart} aria-label="View your order" aria-hidden={!showMini} tabIndex={showMini ? 0 : -1}>
         <span>
           <strong>{count} item{count === 1 ? "" : "s"}</strong>
-          <small>{cart.mode === "delivery" ? (totals.after < fees.freeDeliveryAbove ? `${rupee(fees.freeDeliveryAbove - totals.after)} away from free delivery` : "Free delivery unlocked") : "Pickup · Indiranagar"}</small>
+          <small>{cart.mode === "delivery" ? (totals.after < fees.freeDeliveryAbove ? `${rupee(fees.freeDeliveryAbove - totals.after)} away from free delivery` : "Free delivery unlocked") : "Pickup · Demo Nagar"}</small>
         </span>
         <span className="btn btn-sm" style={{ pointerEvents: "none" }}>View order · {rupee(totals.total)}</span>
       </button>

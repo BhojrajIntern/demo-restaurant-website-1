@@ -132,7 +132,7 @@ export function Reservation() {
   return (
     <section className="section section-light" id="reserve" aria-labelledby="reserve-title">
       <div className="container reserve-grid">
-        <div className="reserve-info reveal">
+        <div className="reserve-info reveal" suppressHydrationWarning>
           <span className="eyebrow">Reservations</span>
           <h2 className="h-lg" id="reserve-title">Save your <span className="italic">seat by the fire</span></h2>
           <p className="lead">Instant confirmation for up to {MAX_ONLINE_PARTY} guests. Larger groups and the Saffron Room are handled by our events team.</p>
@@ -142,7 +142,7 @@ export function Reservation() {
             <li><PinIcon /><span><strong>Walk-ins welcome</strong>The bar and terrace keep a few tables for the night.</span></li>
           </ul>
         </div>
-        <div className="form-card reveal reveal-d1">
+        <div className="form-card reveal reveal-d1" suppressHydrationWarning>
           <form onSubmit={submit} noValidate>
             <div className="form-steps" aria-hidden="true"><span className="is-done" /><span className={step2 ? "is-done" : ""} /><span className={step3 ? "is-done" : ""} /></div>
             <div className="row-2">

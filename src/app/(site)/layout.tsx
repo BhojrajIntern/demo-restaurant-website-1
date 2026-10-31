@@ -33,13 +33,12 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             servesCuisine: ["Indian", "North Indian", "South Indian"],
             priceRange: "₹₹₹",
             telephone: brand.phone,
-            address: { "@type": "PostalAddress", streetAddress: "1124, 12th Main Road, HAL 2nd Stage, Indiranagar", addressLocality: "Bengaluru", postalCode: "560038", addressCountry: "IN" },
+            address: { "@type": "PostalAddress", streetAddress: brand.streetAddress, addressLocality: brand.city, postalCode: brand.postalCode, addressCountry: "IN" },
             acceptsReservations: "True",
             url: siteUrl,
             menu: `${siteUrl}/menu`,
             image: `${siteUrl}/opengraph-image.jpg`,
             openingHours: ["Mo 19:00-23:00", "Tu-Th 12:00-15:30", "Tu-Th 19:00-23:00", "Fr 12:00-15:30", "Fr 19:00-23:59", "Sa 12:00-16:00", "Sa 19:00-23:59", "Su 12:00-16:00", "Su 19:00-23:30"],
-            geo: { "@type": "GeoCoordinates", latitude: 12.9719, longitude: 77.6412 },
           }),
         }}
       />

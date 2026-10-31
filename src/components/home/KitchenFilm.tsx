@@ -29,7 +29,7 @@ export function KitchenFilm() {
   return (
     <section className="section" aria-labelledby="film-title" style={{ paddingTop: 0 }}>
       <div className="container">
-        <div className="film reveal">
+        <div className="film reveal" suppressHydrationWarning>
           <video ref={video} muted loop playsInline preload="none" poster={IMG["seekh-grill"].src}>
             <source src="/assets/video/kitchen-mobile.mp4" type="video/mp4" media="(max-width: 860px)" />
             <source src="/assets/video/kitchen.mp4" type="video/mp4" />
